@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "Update Membership";
+}
+
+<h2>Insert Membership Profile</h2>
+
+@using (Html.BeginForm("Update", "Home", FormMethod.Post))
+{
+    <label>ID</label>
+    <br />
+    @Html.TextBox("id", null, new { @class = "form-control", @type = "number", min = "0" })
+    <br />
+
+    <label>Name</label>
+    <br />
+    @Html.TextBox("name", null, new { @class = "form-control", @type = "text" })
+    <br />
+
+    <button type="submit" class="btn btn-primary">Save</button>
+
+}

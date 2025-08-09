@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<main>
+    <section class="text-center">
+        <h1>Social Club Membership Campaign!!!</h1>
+        <p>
+            This web interface allows a prospective member to <br />
+            join a social club, switch club membership, and change membership status as desired. <br />
+            All changes stored in database.
+        </p>
+    </section>
+    <br/> <br/> <hr/>
+
+    <section class="text-center">
+        <div class="row">
+            <!--Register-->
+            <section class="col-md-4">
+                <h2 id="Resgister">Register</h2>
+                <p>When this button is clicked then a member's information will be inserted into the database.'</p>
+                <p><a class="btn btn-outline-dark btn-primary" @Html.ActionLink("New Membership", "DoInsert", "Home", new { area = "" }, new { @class = "nav-link" })</a></p>
+            </section>
+            <!--Update-->
+            <section class="col-md-4">
+                <h2 id="Update">Update</h2>
+                <p>When this button is clicked a member's old information in the database will be replaced in the database.'</p>
+                <p><a class="btn btn-outline-dark btn-warning" @Html.ActionLink("Update Membership", "DoUpdate", "Home", new { area = "" }, new { @class = "nav-link" })</a></p>
+            </section>
+            <!--Delete-->
+            <section class="col-md-4">
+                <h2 id="Delete">Delete</h2>
+                <p>When this button is clicked then a member's data will be deleted from the database.'</p>
+                <p><a class="btn btn-outline-dark btn-danger" @Html.ActionLink("Delete Membership", "DoDelete", "Home", new { area = "" }, new { @class = "nav-link" })</a></p>
+            </section>
+        </div>
+    </section>
+   
+</main>
